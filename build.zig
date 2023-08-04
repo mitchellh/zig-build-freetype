@@ -68,6 +68,7 @@ pub fn build(b: *std.Build) !void {
     }
 
     lib.installHeader("include/freetype-zig.h", "freetype-zig.h");
+    lib.installHeader("upstream/include/ft2build.h", "ft2build.h");
     lib.installHeadersDirectory("upstream/include/freetype", "freetype");
 
     b.installArtifact(lib);
