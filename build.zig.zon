@@ -1,5 +1,5 @@
 .{
-    .name = "libpng",
+    .name = "freetype",
     .version = "0.0.0",
     .dependencies = .{
         .libpng = .{
