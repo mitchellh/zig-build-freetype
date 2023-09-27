@@ -58,8 +58,10 @@ pub fn build(b: *std.Build) !void {
         .windows => {
             lib.addCSourceFiles(&.{
                 "upstream/builds/windows/ftdebug.c",
-                "upstream/src/base/ftver.c",
             }, flags.items);
+            lib.addWin32ResourceFile(.{
+                .file = .{ .path = "upstream/src/base/ftver.rc" },
+            });
         },
         else => lib.addCSourceFile(.{
             .file = .{ .path = "upstream/src/base/ftdebug.c" },
